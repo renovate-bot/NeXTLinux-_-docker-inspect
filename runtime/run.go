@@ -2,18 +2,18 @@ package runtime
 
 import (
 	"fmt"
+	"os"
+	"time"
+
 	"github.com/dustin/go-humanize"
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/afero"
-	"github.com/nextlinux/docker-inspect/docker-inspect"
 	"github.com/nextlinux/docker-inspect/docker-inspect/filetree"
 	"github.com/nextlinux/docker-inspect/docker-inspect/image"
-	"github.com/nextlinux/didocker-inspectve/runtime/ci"
+	"github.com/nextlinux/docker-inspect/runtime/ci"
 	"github.com/nextlinux/docker-inspect/runtime/export"
 	"github.com/nextlinux/docker-inspect/runtime/ui"
 	"github.com/nextlinux/docker-inspect/utils"
-	"os"
-	"time"
+	"github.com/sirupsen/logrus"
+	"github.com/spf13/afero"
 )
 
 func run(enableUi bool, options Options, imageResolver image.Resolver, events eventChannel, filesystem afero.Fs) {
@@ -120,7 +120,7 @@ func Run(options Options) {
 	var exitCode int
 	var events = make(eventChannel)
 
-	imageResolver, err := docker-inspect.GetImageResolver(options.Source)
+	imageResolver, err := docker - inspect.GetImageResolver(options.Source)
 	if err != nil {
 		message := "cannot determine image provider"
 		logrus.Error(message)
