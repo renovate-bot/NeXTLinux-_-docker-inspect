@@ -1,8 +1,8 @@
 package runtime
 
 import (
-	"github.com/spf13/viper"
 	"github.com/nextlinux/docker-inspect/docker-inspect"
+	"github.com/spf13/viper"
 )
 
 type Options struct {

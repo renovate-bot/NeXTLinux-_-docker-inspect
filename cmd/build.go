@@ -1,10 +1,10 @@
 package cmd
 
 import (
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 	"github.com/nextlinux/docker-inspect/docker-inspect"
 	"github.com/nextlinux/docker-inspect/runtime"
+	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 // buildCmd represents the build command

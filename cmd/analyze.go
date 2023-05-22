@@ -2,13 +2,13 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/nextlinux/docker-inspect/docker-inspect"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
-	"github.com/nextlinux/docker-inspect/docker-inspect"
 	"os"
 
-	"github.com/spf13/cobra"
 	"github.com/nextlinux/docker-inspect/runtime"
+	"github.com/spf13/cobra"
 )
 
 // doAnalyzeCmd takes a docker image tag, digest, or id and displays the

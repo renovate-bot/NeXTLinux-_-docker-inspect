@@ -3,11 +3,11 @@ package runtime
 import (
 	"fmt"
 	"github.com/lunixbochs/vtclean"
-	"github.com/spf13/afero"
-	"github.com/spf13/viper"
 	"github.com/nextlinux/docker-inspect/docker-inspect"
 	"github.com/nextlinux/docker-inspect/docker-inspect/image"
 	"github.com/nextlinux/docker-inspect/docker-inspect/image/docker"
+	"github.com/spf13/afero"
+	"github.com/spf13/viper"
 	"os"
 	"testing"
 )
