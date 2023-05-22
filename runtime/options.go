@@ -8,7 +8,7 @@ import (
 type Options struct {
 	Ci           bool
 	Image        string
-	Source       docker-inspect.ImageSource
+	Source       dinspectImage.ImageSource
 	IgnoreErrors bool
 	ExportFile   string
 	CiConfig     *viper.Viper

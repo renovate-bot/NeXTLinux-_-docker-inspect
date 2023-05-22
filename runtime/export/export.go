@@ -3,7 +3,7 @@ package export
 import (
 	"encoding/json"
 
-	docker-inspectImage "github.com/nextlinux/docker-inspect/docker-inspect/image"
+	dinspectImage "github.com/nextlinux/docker-inspect/docker-inspect/image"
 )
 
 type export struct {
@@ -11,7 +11,7 @@ type export struct {
 	Image image   `json:"image"`
 }
 
-func NewExport(analysis *docker-inspectImage.AnalysisResult) *export {
+func NewExport(analysis *dinspectImage.AnalysisResult) *export {
 	data := export{
 		Layer: make([]layer, len(analysis.Layers)),
 		Image: image{

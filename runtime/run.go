@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/dustin/go-humanize"
+	dinspectImage "github.com/nextlinux/docker-inspect/docker-inspect"
 	"github.com/nextlinux/docker-inspect/docker-inspect/filetree"
 	"github.com/nextlinux/docker-inspect/docker-inspect/image"
 	"github.com/nextlinux/docker-inspect/runtime/ci"
@@ -120,7 +121,7 @@ func Run(options Options) {
 	var exitCode int
 	var events = make(eventChannel)
 
-	imageResolver, err := docker - inspect.GetImageResolver(options.Source)
+	imageResolver, err := dinspectImage.GetImageResolver(options.Source)
 	if err != nil {
 		message := "cannot determine image provider"
 		logrus.Error(message)

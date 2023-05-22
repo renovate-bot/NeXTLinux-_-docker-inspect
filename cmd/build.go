@@ -29,7 +29,7 @@ func doBuildCmd(cmd *cobra.Command, args []string) {
 
 	runtime.Run(runtime.Options{
 		Ci:         isCi,
-		Source:     docker-inspect.ParseImageSource(engine),
+		Source:     dinspectImage.ParseImageSource(engine),
 		BuildArgs:  args,
 		ExportFile: exportFile,
 		CiConfig:   ciConfig,

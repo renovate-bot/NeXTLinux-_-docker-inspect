@@ -1,4 +1,4 @@
-package docker-inspect
+package dinspectImage
 
 import (
 	"fmt"

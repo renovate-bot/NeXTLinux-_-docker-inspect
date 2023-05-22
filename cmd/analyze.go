@@ -41,15 +41,15 @@ func doAnalyzeCmd(cmd *cobra.Command, args []string) {
 		os.Exit(1)
 	}
 
-	var sourceType docker-inspect.ImageSource
+	var sourceType dinspectImage.ImageSource
 	var imageStr string
 
-	sourceType, imageStr = docker-inspect.DeriveImageSource(userImage)
+	sourceType, imageStr = dinspectImage.DeriveImageSource(userImage)
 
-	if sourceType == docker-inspect.SourceUnknown {
+	if sourceType == dinspectImage.SourceUnknown {
 		sourceStr := viper.GetString("source")
-		sourceType = docker-inspect.ParseImageSource(sourceStr)
-		if sourceType == docker-inspect.SourceUnknown {
+		sourceType = dinspectImage.ParseImageSource(sourceStr)
+		if sourceType == dinspectImage.SourceUnknown {
 			fmt.Printf("unable to determine image source: %v\n", sourceStr)
 			os.Exit(1)
 		}

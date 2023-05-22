@@ -99,7 +99,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         false,
 				Image:      "docker-inspect-example",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "",
 				CiConfig:   nil,
 				BuildArgs:  nil,
@@ -116,7 +116,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         false,
 				Image:      "docker-inspect-example",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "",
 				CiConfig:   nil,
 				// note: empty slice is passed
@@ -134,7 +134,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         false,
 				Image:      "docker-inspect-example",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "",
 				CiConfig:   nil,
 				BuildArgs:  []string{"an-option"},
@@ -150,7 +150,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         false,
 				Image:      "docker-inspect-example",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "",
 				CiConfig:   nil,
 				BuildArgs:  nil,
@@ -166,7 +166,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         false,
 				Image:      "doesn't-matter",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "",
 				CiConfig:   nil,
 				BuildArgs:  []string{"an-option"},
@@ -181,7 +181,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         true,
 				Image:      "doesn't-matter",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "",
 				CiConfig:   configureCi(),
 				BuildArgs:  []string{"an-option"},
@@ -201,7 +201,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         true,
 				Image:      "doesn't-matter",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "",
 				CiConfig:   viper.New(),
 				BuildArgs:  []string{"an-option"},
@@ -221,7 +221,7 @@ func TestRun(t *testing.T) {
 			options: Options{
 				Ci:         true,
 				Image:      "doesn't-matter",
-				Source:     docker-inspect.SourceDockerEngine,
+				Source:     dinspectImage.SourceDockerEngine,
 				ExportFile: "some-file.json",
 				CiConfig:   configureCi(),
 				BuildArgs:  []string{"an-option"},
